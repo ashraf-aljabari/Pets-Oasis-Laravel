@@ -37,36 +37,22 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    protected $table = "user";
+    protected $table = "users";
     public $primaryKey = 'user_id';
     public $timestamps = true;
 
     public function posts()
     {
-        return $this->hasMany(Question::class);
+        return $this->hasMany(Post::class, 'user_id','user_id');
     }
     public function comment()
     {
-        return $this->hasMany(Question_comment::class);
+        return $this->hasMany(Comment::class,'user_id','user_id');
     }
     public function category()
     {
-        return $this->hasOne(Category::class);
+        return $this->hasMany(Category::class, 'user_id', 'user_id');
     }
-    public function adoption()
-    {
-        return $this->hasMany(Adoption::class);
-    }
-    public function adoption_comment()
-    {
-        return $this->hasMany(Adoption_comment::class);
-    }
-    public function rescue()
-    {
-        return $this->hasMany(Rescue::class);
-    }
-    public function rescue_comment()
-    {
-        return $this->hasMany(Rescue_comment::class);
-    }
+
+
 }

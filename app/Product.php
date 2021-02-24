@@ -12,6 +12,6 @@ class Product extends Model
     public $timestamps = true;
     public function subCategory()
     {
-        return $this->belongsTo(Sub_Category::class);
+        return $this->belongsTo(Sub_Category::class, 'sub_category_id');
     }
 }

@@ -12,10 +12,10 @@ class Category extends Model
     public $timestamps = true;
     public function user()
     {
-        return $this->hasOne(User::class);
+        return $this->belongsTo(User::class, 'user_id');
     }
     public function subCategories()
     {
-        return $this->hasMany(Sub_Category::class);
+        return $this->hasMany(Sub_Category::class,'category_id','category_id');
     }
 }
