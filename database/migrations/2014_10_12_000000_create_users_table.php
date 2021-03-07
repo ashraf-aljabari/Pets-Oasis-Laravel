@@ -19,9 +19,8 @@ class CreateUsersTable extends Migration
             $table->string('user_email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('user_password');
-            $table->string('user_image');
-            $table->boolean('user_type');
-//            $table->foreignId('category_id')->default('none')->constrained('users')->onDelete('cascade');
+            $table->string('user_image')->default('default.png');
+            $table->string('user_type');
             $table->rememberToken();
             $table->timestamps();
         });

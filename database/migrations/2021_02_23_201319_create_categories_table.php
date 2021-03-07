@@ -17,11 +17,11 @@ class CreateCategoriesTable extends Migration
             $table->id('category_id');
             $table->string('category_name');
             $table->string('category_image');
+            $table->boolean('category_approved')->default(0);
             $table->unsignedBigInteger('user_id');
-//            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->timestamps();
             $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade');
 
-            $table->timestamps();
         });
     }
 

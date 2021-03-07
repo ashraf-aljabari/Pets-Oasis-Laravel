@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'user_name', 'user_email', 'user_password', 'user_image'
+        'user_name', 'user_email', 'user_password', 'user_image' , 'user_type',
     ];
 
     /**
@@ -52,6 +52,10 @@ class User extends Authenticatable
     public function category()
     {
         return $this->hasMany(Category::class, 'user_id', 'user_id');
+    }
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'order_id', 'order_id');
     }
 
 

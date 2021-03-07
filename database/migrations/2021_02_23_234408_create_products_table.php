@@ -19,8 +19,8 @@ class CreateProductsTable extends Migration
             $table->text('product_description');
             $table->double('product_price', 8, 2);
             $table->string('product_image');
-            $table->timestamps();
             $table->unsignedBigInteger('sub_category_id');
+            $table->timestamps();
 
             $table->foreign('sub_category_id')->references('sub_category_id')->on('sub_categories')->onDelete('cascade');
         });

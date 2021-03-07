@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3d88fa6639c9463d85260309c03bb68",
+    "content-hash": "18e18dd9e932c83005e0e2df95690bd3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -61,6 +61,68 @@
                 "source": "https://github.com/asm89/stack-cors/tree/v2.0.2"
             },
             "time": "2020-10-29T16:03:21+00:00"
+        },
+        {
+            "name": "brian2694/laravel-toastr",
+            "version": "5.54",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brian2694/laravel-toastr.git",
+                "reference": "e543a8a6953be6b25706da4c7ae48600666a70dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brian2694/laravel-toastr/zipball/e543a8a6953be6b25706da4c7ae48600666a70dc",
+                "reference": "e543a8a6953be6b25706da4c7ae48600666a70dc",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/session": ">=5.2.7",
+                "illuminate/support": ">=5.2.7",
+                "php": ">=5.5.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Brian2694\\Toastr\\ToastrServiceProvider"
+                    ],
+                    "aliases": {
+                        "Toastr": "Brian2694\\Toastr\\Facades\\Toastr"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Brian2694\\Toastr\\": "src/"
+                },
+                "files": [
+                    "src/helper.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "brian2694",
+                    "email": "briansanchez2694@gmail.com"
+                }
+            ],
+            "description": "toastr.js for laravel 5.5",
+            "homepage": "https://github.com/brian2694/laravel-toastr",
+            "keywords": [
+                "laravel",
+                "notification",
+                "php",
+                "toastr"
+            ],
+            "support": {
+                "issues": "https://github.com/brian2694/laravel-toastr/issues",
+                "source": "https://github.com/brian2694/laravel-toastr/tree/5.54"
+            },
+            "time": "2020-07-13T22:18:02+00:00"
         },
         {
             "name": "brick/math",
@@ -1058,6 +1120,61 @@
                 "source": "https://github.com/laravel/tinker/tree/v2.6.0"
             },
             "time": "2021-01-26T20:35:18+00:00"
+        },
+        {
+            "name": "laravel/ui",
+            "version": "v2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/ui.git",
+                "reference": "d01a705763c243b07be795e9d1bb47f89260f73d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/ui/zipball/d01a705763c243b07be795e9d1bb47f89260f73d",
+                "reference": "d01a705763c243b07be795e9d1bb47f89260f73d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "^7.0",
+                "illuminate/filesystem": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.2.5|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Laravel\\Ui\\UiServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\Ui\\": "src/",
+                    "Illuminate\\Foundation\\Auth\\": "auth-backend/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                }
+            ],
+            "description": "Laravel UI utilities and presets.",
+            "keywords": [
+                "laravel",
+                "ui"
+            ],
+            "support": {
+                "issues": "https://github.com/laravel/ui/issues",
+                "source": "https://github.com/laravel/ui/tree/v2.5.0"
+            },
+            "time": "2020-11-03T19:45:19+00:00"
         },
         {
             "name": "league/commonmark",
